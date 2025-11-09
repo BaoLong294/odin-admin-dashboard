@@ -59,12 +59,32 @@ svg[class="dashboard-icon"] {
 
 /* HEADER */
 
-.header input {
+.header {
+  padding: 20px 30px;
+}
+
+.header .header-top {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  max-width: 1200px;
+}
+
+.header-top form,
+.header-top .header-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-top input {
   background-color: #e2e8f0;
   font-size: 1rem;
   padding: 5px 15px;
   border: none;
   border-radius: 14px;
+  width: clamp(260px, 38vw, 500px);
 }
 
 .header-user img {
@@ -75,6 +95,20 @@ svg[class="dashboard-icon"] {
 .header-user p {
   font-size: 1rem;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+.header .header-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.header-bottom .header-hi {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .header-hi img {
@@ -85,10 +119,17 @@ svg[class="dashboard-icon"] {
 .header-hi p {
   font-size: 1.3rem;
   font-weight: 600;
+  width: clamp(260px, 40vw, 500px);
 }
 
 .header-hi p:first-of-type {
   font-size: 0.8rem;
+}
+
+.header-bottom .header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header-buttons button {
