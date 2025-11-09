@@ -22,8 +22,6 @@ A clean, responsive admin dashboard built with semantic HTML and modern CSS. The
   - Transitions, shadows, transforms
 - SVG sprite icons (<symbol> + <use>)
 
----
-
 ## Completed Features
 
 - App frame
