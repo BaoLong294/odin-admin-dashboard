@@ -46,8 +46,7 @@
   font-weight: 600;
 }
 
-.sidebar svg,
-.header svg {
+.sidebar svg {
   width: 20px;
   height: 20px;
 }
@@ -69,6 +68,18 @@ svg[class="dashboard-icon"] {
   justify-content: center;
   gap: 90px;
   max-width: 1200px;
+}
+
+.header-top svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.header-top svg:hover {
+  opacity: 1;
 }
 
 .header-top form,
@@ -140,6 +151,17 @@ svg[class="dashboard-icon"] {
   border: none;
   border-radius: 16px;
   cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.header-buttons button:hover {
+  background-color: #127fbf;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-buttons button:active {
+  background-color: #0f6ea8;
+  transform: translateY(2px);
 }
 
 /* MAIN CONTENT */
@@ -196,7 +218,7 @@ svg[class="dashboard-icon"] {
   height: 18px;
   cursor: pointer;
   opacity: 0.5;
-  transition: opacity 0.2s;
+  transition: opacity 0.15s;
 }
 
 .project-actions svg:hover {
