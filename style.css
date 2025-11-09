@@ -146,10 +146,16 @@ svg[class="dashboard-icon"] {
 
 .main-content {
   background-color: #e2e8f0;
+  padding: 25px 20px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto auto;
+  gap: 25px;
 }
 
 .main-content h2 {
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .main-content h3,
@@ -157,30 +163,82 @@ svg[class="dashboard-icon"] {
   font-size: 0.9rem;
 }
 
+.main-content .your-project {
+  grid-row: 1/-1;
+}
+
+.main-content .all-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
 .main-content .project {
   background-color: white;
-  height: 130px;
+  height: 177px;
   border-left: 10px solid #f0b429;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-.project svg {
+.project .project-actions {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.project-actions svg {
   width: 18px;
   height: 18px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.project-actions svg:hover {
+  opacity: 1;
+}
+
+.announcement-content,
+.trending-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .announcement-content {
-  background-color: white;
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .announcement-content div:not(:last-child) {
   border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 18px;
+}
+
+.trending-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.trending-content .content {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .trending img {
   width: 37px;
   border-radius: 50%;
+}
+
+.trending .name {
+  font-weight: 600;
 }
